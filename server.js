@@ -20,9 +20,10 @@ app.get('/home', function(req, res){
 	// res.send(JSON.stringify({"name": "Lucky Sahani"}));
 })
 
-app.post('/add', function(req, res){
-	var num1 = parseFloat(req.body.num1);
-	var num2 = parseFloat(req.body.num2);
+app.post('/', function(req, res){
+	// console.log(req)
+	var num1 = parseFloat(req.query.num1);
+	var num2 = parseFloat(req.query.num2);
 	var add_result ;
 	res.setHeader('Content-Type', 'application/json');
 	add_result = num1+num2;
